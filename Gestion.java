@@ -25,6 +25,18 @@ public class Gestion{
 
     }
 
+    //Affichage des produits en rupture de stock
+    public void afficherRuptureStock(){
+        System.out.println("Les produits suivants sont en rupture de stock");
+        int seuil = 10;
+        for (int i = 0; i < produits.size(); i++) {
+            if(produits.quantite < seuil){
+                System.out.println(produits(i).nomProduit +" : Quantité restante : "+produits.quantite);
+            }
+        }
+
+    }
+
     public static void main(String[] args) {
         
     }
