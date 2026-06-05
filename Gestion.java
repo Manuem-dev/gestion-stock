@@ -1,46 +1,36 @@
-import java.util.Scanner;
 
-public class Gestion{
+public class Gestion {
 
     // Functionnalities
     /*
-    1- ajouterProduit() ==> Jean Urbain
-    2- receptionnerProduit(int pQuantite) ==> Marie-Princesse 
-    3- vendreProduit(int pQuantite) ==> Gloria
-    4- afficherStock() ==> Fovi Alphonse
-    5- afficherRuptureStock() ==> René KingBrain
-    6- Gestion de la méthode main. ==> Me ( c'est doyi )
-    */
+     * 1- ajouterProduit() ==> Jean Urbain
+     * 2- receptionnerProduit(int pQuantite) ==> Marie-Princesse
+     * 3- vendreProduit(int pQuantite) ==> Gloria
+     * 4- afficherStock() ==> Fovi Alphonse
+     * 5- afficherRuptureStock() ==> René KingBrain
+     * 6- Gestion de la méthode main. ==> Me ( c'est doyi )
+     */
 
-static void vendreProduit(String pNomProduit, int pQuantite) {
-    if (pQuantite <= 0) {
-        System.out.println("Quantité de vente invalide.");
-        return;
-    }
+    public class TeamGestion {
+        // Attributs
+        private String nomProduit = "";
+        private int quantite = 0;
+        private double prix = 0;
 
-    for (int i = 0; i < nbProduits; i++) {
-        if (stock[i].nomProduit.equalsIgnoreCase(pNomProduit)) {
-            int pquantiteStock = stock[i].quantite;
-
-            if (pquantiteStock >= pQuantite) {
-                stock[i].quantite -= pQuantite; 
-                System.out.println("Vente réussie. Quantité restante : " + stock[i].quantite);
+        public void vendreProduit(String pNomProduit, int pQuantite) {
+            if (pQuantite <= 0) {
+                System.out.println("Quantité de vente invalide.");
+                return;
+            }
+            if (this.quantite >= pQuantite) {
+                this.quantite -= pQuantite;
+                System.out.println("Vente réussie. Quantité restante : " + quantite);
             } else {
                 System.out.println("Stock insuffisant pour la vente.");
             }
             return;
+
         }
-    }
-    System.out.println("Produit non trouvé.");
-}
-
-
-
-    public class TeamGestion{
-        // Attributs
-        private String nomProduit="";
-        private int quantite=0;
-        private double prix=0;
 
         //afficherstock()
 
@@ -55,7 +45,7 @@ static void vendreProduit(String pNomProduit, int pQuantite) {
         }
 
         // Constructeur d'initialisation
-        public TeamGestion(String pNomProduit,int pPrix){
+        public TeamGestion(String pNomProduit, int pPrix) {
             nomProduit = pNomProduit;
             prix = pPrix;
         }
@@ -71,6 +61,6 @@ static void vendreProduit(String pNomProduit, int pQuantite) {
 
 
     public static void main(String[] args) {
-        
+
     }
 }
