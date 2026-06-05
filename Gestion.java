@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Gestion{
 
     // Functionnalities
@@ -9,6 +11,29 @@ public class Gestion{
     5- afficherRuptureStock() ==> René KingBrain
     6- Gestion de la méthode main. ==> Me ( c'est doyi )
     */
+
+static void vendreProduit(String pNomProduit, int pQuantite) {
+    if (pQuantite <= 0) {
+        System.out.println("Quantité de vente invalide.");
+        return;
+    }
+
+    for (int i = 0; i < nbProduits; i++) {
+        if (stock[i].nomProduit.equalsIgnoreCase(pNomProduit)) {
+            int pquantiteStock = stock[i].quantite;
+
+            if (pquantiteStock >= pQuantite) {
+                stock[i].quantite -= pQuantite; 
+                System.out.println("Vente réussie. Quantité restante : " + stock[i].quantite);
+            } else {
+                System.out.println("Stock insuffisant pour la vente.");
+            }
+            return;
+        }
+    }
+    System.out.println("Produit non trouvé.");
+}
+
 
 
     public class TeamGestion{
