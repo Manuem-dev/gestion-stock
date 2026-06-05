@@ -22,8 +22,8 @@ public class Gestion {
                 System.out.println("Quantité de vente invalide.");
                 return;
             }
-            if (quantite >= pQuantite) {
-                quantite -= pQuantite;
+            if (this.quantite >= pQuantite) {
+                this.quantite -= pQuantite;
                 System.out.println("Vente réussie. Quantité restante : " + quantite);
             } else {
                 System.out.println("Stock insuffisant pour la vente.");
