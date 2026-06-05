@@ -48,19 +48,15 @@ static void vendreProduit(String pNomProduit, int pQuantite) {
             prix = pPrix;
         }
 
-    }
-
-    //Affichage des produits en rupture de stock
-    public void afficherRuptureStock(){
-        System.out.println("Les produits suivants sont en rupture de stock");
-        int seuil = 10;
-        for (int i = 0; i < produits.size(); i++) {
-            if(produits.quantite < seuil){
-                System.out.println(produits(i).nomProduit +" : Quantité restante : "+produits.quantite);
+         //Affichage des produits en rupture de stock
+            public void afficherRuptureStock(){
+                int seuil = 10;
+                if(quantite < seuil){
+                    System.out.println(nomProduit);
+                }
             }
-        }
-
     }
+
 
     public static void main(String[] args) {
         
