@@ -7,7 +7,7 @@ public class Gestion{
     3- vendreProduit(int pQuantite) ==> Gloria
     4- afficherStock() ==> Fovi Alphonse
     5- afficherRuptureStock() ==> René KingBrain
-    6- Gestion de la méthode main. ==> Me ( c'est doyi )
+    6- Gestion de la méthode main. ==> Me ( c'est doyi ,courage )
     */
 
 
@@ -24,8 +24,9 @@ public class Gestion{
         }
 
     }
+    public static void receptionnerProduit( int pQuantite) {
+        this.quantite = this.quantite + pQuantite;
 
-    public static void main(String[] args) {
         
     }
 }
