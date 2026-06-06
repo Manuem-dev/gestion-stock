@@ -103,7 +103,7 @@ public class Gestion {
                     System.out.println("vous avez choisi le produit " + produits.get(index).nomProduit);
                     System.out.println("veuillez entrer la quantité à ajouter ");
                     quantite = input.nextInt();
-                    produits.get(index).receptionnerProduit();
+                    produits.get(index).receptionnerProduit(quantite);
 
                     break;
             
