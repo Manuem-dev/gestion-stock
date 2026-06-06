@@ -23,7 +23,7 @@ public class Gestion {
                 return;
             }
             if (this.quantite >= pQuantite) {
-                this.quantite -= pQuantite;
+                this.quantite = this.quantite - pQuantite;
                 System.out.println("Vente réussie. Quantité restante : " + quantite);
             } else {
                 System.out.println("Stock insuffisant pour la vente.");
