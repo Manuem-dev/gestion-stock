@@ -1,5 +1,6 @@
 # gestion-stock
 ## Fonctionnalités
+
 **1- ajouterProduit() ==> Jean Urbain**
 **2- receptionnerProduit(int pQuantite) ==> Marie-Princesse**
 **3- vendreProduit(int pQuantite) ==> Gloria**
