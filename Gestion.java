@@ -1,4 +1,5 @@
-public class Gestion{
+
+public class Gestion {
 
     // Functionnalities
     /*
@@ -11,14 +12,36 @@ public class Gestion{
     */
 
 
-    public class TeamGestion{
+    public class TeamGestion {
         // Attributs
-        private String nomProduit="";
-        private int quantite=0;
-        private double prix=0;
+        private String nomProduit = "";
+        private int quantite = 0;
+        private double prix = 0;
+
+        public void vendreProduit(String pNomProduit, int pQuantite) {
+            if (pQuantite <= 0) {
+                System.out.println("Quantité de vente invalide.");
+                return;
+            }
+            if (this.quantite >= pQuantite) {
+                this.quantite = this.quantite - pQuantite;
+                System.out.println("Vente réussie. Quantité restante : " + quantite);
+            } else {
+                System.out.println("Stock insuffisant pour la vente.");
+            }
+            return;
+
+        }
+
+        //afficherstock()
+       public string afficherStock(){
+            
+        }
+        System.out.prinln("MENU D'AFFICHAGE DU STOCK ");
+        return "[" "nom = "+nom+ "| prix = "+prix+ "| quantité=" +quantite+"]";
 
         // Constructeur d'initialisation
-        public TeamGestion(String pNomProduit,int pPrix){
+        public TeamGestion(String pNomProduit, int pPrix) {
             nomProduit = pNomProduit;
             prix = pPrix;
         }
@@ -26,9 +49,18 @@ public class Gestion{
             this.quantite = this.quantite + pQuantite;
         }    
 
+         //Affichage des produits en rupture de stock
+        public void afficherRuptureStock(){
+            int seuil = 10;
+            if(quantite < seuil){
+                System.out.println(nomProduit);
+            }
+        }
     }
     
 
-        
-   
+
+    public static void main(String[] args) {
+
+    }
 }
